@@ -39,7 +39,8 @@
 
 
 import React, { useState } from 'react';
-import file from "../assets/CV/MyResumeNew.pdf";
+// import file from "../assets/CV/MyResumeNew.pdf";
+import file from "../assets/CV/resume_updated.pdf";
 import { pdfjs } from 'react-pdf';
 import { Document, Page } from 'react-pdf';
 import { HiDownload } from 'react-icons/hi'; // Optional: For download icon

@@ -8,9 +8,11 @@ import { Link } from 'react-router-dom';
 function AboutMe() {
     return (
         <>
-            <h1 className='text-2xl font-bold text-center text-gray-950 mb-8 mt-24'>About Me</h1>
-            <div className='py-12 px-6 text-white flex flex-row items-center justify-center'>
-                <div className='max-w-[45%] w-full'>
+            <h1 className='text-2xl md:text-3xl font-bold text-center text-gray-950 mb-8 mt-24'>About Me</h1>
+            <div className='py-12 px-4 md:px-6 text-white flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0'>
+
+                {/* Left Side: Social Links */}
+                <div className='max-w-full md:max-w-[45%] w-full px-4 md:px-0'>
                     <div className='flex flex-col justify-center items-start space-y-4'>
                         <p className='text-base text-gray-600 flex items-center'>
                             <FaGithub className='text-xl mr-4' />
@@ -31,8 +33,9 @@ function AboutMe() {
                     </div>
                 </div>
 
-                <div className='max-w-[45%] w-full p-8 rounded-lg '>
-                    <p className='text-lg leading-relaxed text-teal-950'>
+                {/* Right Side: Description */}
+                <div className='max-w-full md:max-w-[45%] w-full p-6 md:p-8 rounded-lg bg-white'>
+                    <p className='text-base md:text-lg leading-relaxed text-teal-950'>
                         I am a passionate MERN stack developer with a keen interest in building efficient and scalable web applications.
                         With expertise in MongoDB, Express.js, React.js, and Node.js, I enjoy developing end-to-end solutions that offer seamless
                         user experiences. In addition to web development, I am proficient in C, C++, Java, and Python, which gives me the flexibility
@@ -43,6 +46,7 @@ function AboutMe() {
                 </div>
             </div>
         </>
+
     )
 }
 

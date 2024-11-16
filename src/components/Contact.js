@@ -49,32 +49,34 @@ function Contact() {
 
     return (
         <>
-            <div className='bg-[#2A2A2A] mt-[14rem]'>
+            <div className='bg-[#2A2A2A] mt-[14rem] px-4'>
                 <h1 className='text-3xl font-bold text-center text-gray-300 mb-6'>Contact</h1>
                 <p className='text-center text-base text-gray-400 mb-8'>Thanks for scrolling! Feel free to leave a message below.</p>
 
-                <div className=' mx-auto p-6 bg-[#b7b5b5] rounded-lg shadow-lg flex flex-1 items-center justify-center'>
-                    <div className='max-w-[45%] w-full text-base font-semibold '>
-                        <img src={logo} alt="logo" className='h-28 w-28 mb-8 rounded-md' loading='lazy' />
-                        <h1 className='text-xl font-semibold mb-6'>Let's Get In Touch</h1>
-                        <Link to="mailto:soumenpalcse@gmail.com">
-                            <span className='flex flex-1 space-x-4'><CgMail className='mt-[0.4rem] mr-2' /> soumenpalcse@gmail.com</span>
+                <div className='mx-auto p-6 bg-[#b7b5b5] rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start justify-center max-w-4xl'>
+
+                    {/* Left Section: Contact Details */}
+                    <div className='w-full md:max-w-[45%] text-base font-semibold mb-8 md:mb-0 md:mr-8'>
+                        <img src={logo} alt="logo" className='h-28 w-28 mb-6 md:mb-8 rounded-md mx-auto md:mx-0' loading='lazy' />
+                        <h1 className='text-xl font-semibold mb-4 md:mb-6 text-center md:text-left'>Let's Get In Touch</h1>
+                        <Link to="mailto:soumenpalcse@gmail.com" className='flex items-center justify-center md:justify-start space-x-4 mb-4 text-gray-700'>
+                            <CgMail className='text-xl' /> <span>soumenpalcse@gmail.com</span>
                         </Link>
-                        <div className='flex text-2xl space-x-4 mt-4'>
+                        <div className='flex justify-center md:justify-start text-2xl space-x-4'>
                             <Link to="https://www.linkedin.com/in/soumen-pal-141866309/" target='_blank' className='hover:text-[#0e76a8]'><FaLinkedin /></Link>
                             <Link to="https://www.instagram.com/spal0_1" target='_blank' className='hover:text-[#E1306C]'><FaInstagram /></Link>
                             <Link to="https://x.com/" target='_blank' className='hover:text-[#1DA1F2]'><FaTwitterSquare /></Link>
-                            <Link to=""></Link>
                         </div>
                         <button
                             onClick={showCV}
-                            className='mt-8 px-4 py-2 rounded-md bg-orange-500 text-white text-base font-semibold space-x-4 hover:bg-orange-300'
-                        >
-                            <span className='flex flex-row text-lg space-x-4'>MY CV <CgSoftwareDownload className='mt-[0.4rem] text-xl' /></span>
+                            className='mt-8 w-full md:w-auto px-4 py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-300 flex items-center justify-center md:justify-start space-x-2'>
+                            <span>MY CV</span> <CgSoftwareDownload className='text-xl' />
                         </button>
                     </div>
 
-                    <form onSubmit={submitHandle} className='space-y-6 max-w-[45%] w-full'>
+                    {/* Right Section: Contact Form */}
+                    <form onSubmit={submitHandle} className='w-full md:max-w-[45%] space-y-6'>
+
                         {/* Name Field */}
                         <div className='flex flex-col'>
                             <label className='text-gray-700 font-medium mb-2'>Name:</label>
@@ -116,14 +118,12 @@ function Contact() {
                         {/* Submit Button */}
                         <button
                             type='submit'
-                            className='w-full px-4 py-2 bg-orange-500 text-white font-medium text-base rounded-md hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-500'
-                        >
+                            className='w-full px-4 py-2 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-500'>
                             Send
                         </button>
                     </form>
                 </div>
             </div>
-
         </>
 
     )

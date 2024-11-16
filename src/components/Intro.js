@@ -56,13 +56,50 @@ import { Link } from 'react-router-dom';
 function Intro() {
 
     return (
-        <div className='flex flex-1 justify-center items-center text-gray-700 mt-10 mb-10 ' style={{ backgroundColor: '' }}>
+        // <div className='flex flex-1 justify-center items-center text-gray-700 mt-10 mb-10 ' style={{ backgroundColor: '' }}>
+        //     {/* Left Side: Text */}
+        //     <div className='flex flex-col justify-center max-w-[45%] w-full'>
+        //         <h1 className='text-4xl font-bold mb-4'>Hi, I am Soumen Pal</h1>
+        //         <p className='text-2xl mb-6'>
+        //             I am a {` `}
+        //             <span className='text-2xl' style={{ color: 'black', fontWeight: 'bold' }}>
+        //                 <Typewriter
+        //                     words={['Software Developer', 'Full Stack Developer', 'UI Designer']}
+        //                     loop={true}
+        //                     cursor
+        //                     cursorStyle='_'
+        //                     typeSpeed={70}
+        //                     deleteSpeed={50}
+        //                     delaySpeed={1000}
+        //                 />
+        //             </span>
+        //         </p>
+        //         <p className='text-xl mb-6'>
+        //             A passionate coder from India, skilled in web development, dedicated to learning
+        //             new technologies and creating impactful projects.
+        //         </p>
+        //         <div className='flex space-x-4'>
+        //             <Link to='/contact'>
+        //                 <button className='px-4 py-2 bg-orange-400 text-white hover:bg-orange-300 rounded-md font-medium '>Contact Me</button>
+        //             </Link>
+        //         </div>
+        //     </div>
+
+        //     {/* Right Side: Profile Image */}
+        // <div className='flex justify-center items-center max-w-[45%] w-full'>
+        //     <div className='h-[18rem] w-[16rem] rounded-md shadow-lg border-4 border-gray-300 overflow-hidden'>
+        //         <img src={myDp} alt="Profile" className='object-cover' loading='lazy' />
+        //     </div>
+        // </div>
+        // </div>
+
+        <div className='flex flex-col md:flex-row justify-center items-center text-gray-700 mt-10 mb-10 px-4' style={{ backgroundColor: '#f3f4f6' }}>
             {/* Left Side: Text */}
-            <div className='flex flex-col justify-center max-w-[45%] w-full'>
-                <h1 className='text-4xl font-bold mb-4'>Hi, I am Soumen Pal</h1>
-                <p className='text-2xl mb-6'>
-                    I am a {` `}
-                    <span className='text-2xl' style={{ color: 'black', fontWeight: 'bold' }}>
+            <div className='flex flex-col justify-center max-w-[90%] md:max-w-[45%] w-full mb-6 md:mb-0'>
+                <h1 className='text-4xl font-bold mb-4 text-center md:text-left'>Hi, I am Soumen Pal</h1>
+                <p className='text-2xl mb-6 text-center md:text-left'>
+                    I am a{' '}
+                    <span className='text-2xl font-bold text-black'>
                         <Typewriter
                             words={['Software Developer', 'Full Stack Developer', 'UI Designer']}
                             loop={true}
@@ -74,24 +111,30 @@ function Intro() {
                         />
                     </span>
                 </p>
-                <p className='text-xl mb-6'>
+                <p className='text-xl mb-6 text-center md:text-left'>
                     A passionate coder from India, skilled in web development, dedicated to learning
                     new technologies and creating impactful projects.
                 </p>
-                <div className='flex space-x-4'>
+                <div className='flex justify-center md:justify-start'>
                     <Link to='/contact'>
-                        <button className='px-4 py-2 bg-orange-400 text-white hover:bg-orange-300 rounded-md font-medium '>Contact Me</button>
+                        <button className='px-4 py-2 bg-orange-400 text-white hover:bg-orange-300 rounded-md font-medium transition duration-200'>Contact Me</button>
                     </Link>
                 </div>
             </div>
 
             {/* Right Side: Profile Image */}
+            {/* <div className='flex justify-center items-center max-w-[90%] md:max-w-[45%] w-full'>
+                <div className='h-[18rem] w-[16rem] rounded-md shadow-lg border-4 border-gray-300 overflow-hidden transform transition duration-300 hover:scale-105'>
+                    <img src={myDp} alt="Profile" className='object-cover w-full h-full' loading='lazy' />
+                </div>
+            </div> */}
             <div className='flex justify-center items-center max-w-[45%] w-full'>
                 <div className='h-[18rem] w-[16rem] rounded-md shadow-lg border-4 border-gray-300 overflow-hidden'>
                     <img src={myDp} alt="Profile" className='object-cover' loading='lazy' />
                 </div>
             </div>
         </div>
+
     );
 }
 
