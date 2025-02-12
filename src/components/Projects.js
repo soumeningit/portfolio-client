@@ -15,7 +15,7 @@ const images = [
         title: "E-Learning App",
         description: "E-Learning App is a web application that allows users to learn new skills and knowledge",
         link: "https://github.com/soumeningit/NucleusET",
-        liveLink: "https://nucleuset-3jhf.onrender.com/"
+        liveLink: "https://nucleus-nine-zeta.vercel.app/"
     },
     {
         id: 6,
