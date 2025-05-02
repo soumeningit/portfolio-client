@@ -9,7 +9,6 @@ import AboutMe from './AboutMe'
 function Home() {
     return (
         <div className='bg-[#ffffff] overflow-hidden'>
-            <Navbar />
             <Intro />
             <MySkills />
             <Projects />
