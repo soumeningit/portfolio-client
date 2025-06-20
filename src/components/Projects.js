@@ -20,14 +20,6 @@ const projects = [
         liveLink: "https://nucleus-nine-zeta.vercel.app/"
     },
     {
-        id: 6,
-        image: img6,
-        title: "Mock Interview",
-        description: "Users can practice interviews with instant analysis. Offers paid and free versions.",
-        link: "https://github.com/soumeningit/InstantMockInterview",
-        liveLink: "https://instant-mock-interview.vercel.app/"
-    },
-    {
         id: 2,
         image: img7,
         title: "Rent Mate",
@@ -50,14 +42,6 @@ const projects = [
         description: "Complete ecommerce platform to buy and sell products online.",
         link: "https://github.com/soumeningit/NewEcommarce",
         liveLink: "https://main--soumen-shopping-app.netlify.app/"
-    },
-    {
-        id: 5,
-        image: img5,
-        title: "Medical App",
-        description: "A virtual platform for patients to consult doctors remotely.",
-        link: "",
-        liveLink: ""
     },
     {
         id: 4,
